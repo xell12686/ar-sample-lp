@@ -25,3 +25,17 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.cont-h-s::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
+}
+
+.scrollable > div:first-child {
+  margin-left: -80%;
+}
+
+@media (min-width: 768px) {
+  .scrollable > div:first-child {
+    margin-left: -10vw;
+  }
+}
