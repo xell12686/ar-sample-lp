@@ -1,10 +1,10 @@
 "use client";
 
 import { useRef, useState } from "react";
-import slide1Url from "../../../public/images/slide1.png";
-import slide2Url from "../../../public/images/slide2.png";
-import slide3Url from "../../../public/images/slide3.png";
-import slide4Url from "../../../public/images/slide4.png";
+import slide1Url from "../../../public/images/slide1.jpg";
+import slide2Url from "../../../public/images/slide2.jpg";
+import slide3Url from "../../../public/images/slide3.jpg";
+import slide4Url from "../../../public/images/slide4.jpg";
 
 const images = [slide1Url, slide2Url, slide3Url, slide4Url];
 

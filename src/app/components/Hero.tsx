@@ -29,11 +29,12 @@ const Hero: React.FC = () => {
 
       <div className="h-auto w-full pt-3 md:h-[788px] md:pt-0">
         <Image
-          src="/images/hero-bg.jpg"
+          src="/images/hero-bg-retina.jpg"
           alt="Hero background"
           width={1024}
           height={1024}
           className="h-full w-full object-cover object-[49%] md:object-center xl:object-[94%]"
+          priority={true}
         />
       </div>
     </section>
