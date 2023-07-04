@@ -5,7 +5,7 @@ import Subscribe from "./components/Subscribe";
 import Carousel from "./components/Carousel";
 import Copyright from "./components/Copyright";
 import Footer from "./components/Footer";
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
 
 export default function Home() {
   return (
