@@ -3,7 +3,7 @@ import { BsFacebook, BsInstagram, BsLinkedin } from "react-icons/bs";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="flex flex-col gap-7 bg-secondary px-10 py-32 text-center text-[10px] md:flex-row md:gap-16 md:px-20 md:pb-24 md:pt-12 md:text-left">
+    <footer className="flex flex-col gap-7 bg-secondary px-10 py-24 text-center text-[10px] md:flex-row md:gap-16 md:px-20 md:pb-24 md:pt-12 md:text-left">
       <div>
         <h3 className="mb-3 text-xs font-semibold uppercase">Address</h3>
         <p>
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
         </p>
       </div>
 
-      <div className="m-auto md:my-0 md:ml-auto md:mr-0">
+      <div className="m-auto mt-4 md:my-0 md:ml-auto md:mr-0">
         <ul className="flex flex-row gap-6 text-lg">
           <li>
             <a href="#">
