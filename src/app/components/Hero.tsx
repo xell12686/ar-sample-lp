@@ -1,10 +1,15 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 const Hero: React.FC = () => {
+
   return (
     <section className="flex h-auto w-full bg-primary pb-[82px] text-white md:pb-0">
-      <div className="flex max-w-2xl flex-col gap-5 px-10 py-20 pb-0 pt-0 md:px-28 md:py-32 md:pb-32 md:pt-[187px]">
+      <div
+        className="flex md:w-[632px] flex-col gap-5 px-10 py-20 pb-0 pt-0 md:px-28 md:py-32 md:pb-32 md:pt-[187px] z-10 bg-primary md:flex-shrink-0"
+      >
         <h1 className="text-4xl leading-tight md:text-5xl">Launching 2023</h1>
         <h5 className="text-sm leading-relaxed md:text-xl md:leading-relaxed">
           We are in the middle of updating our website but are still very much
@@ -27,7 +32,9 @@ const Hero: React.FC = () => {
         </ul>
       </div>
 
-      <div className="h-auto w-full pt-3 md:h-[788px] md:pt-0">
+      <div
+        className="h-auto w-full pt-3 md:h-[788px] md:pt-0"
+      >
         <Image
           src="/images/hero-bg-retina.jpg"
           alt="Hero background"
