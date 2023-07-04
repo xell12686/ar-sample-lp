@@ -13,11 +13,13 @@ const Carousel: React.FC = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [showClass, setShowClass] = useState(false);
 
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
     setIsDragging(true);
     setStartX(e.pageX - containerRef.current!.offsetLeft);
     setScrollLeft(containerRef.current!.scrollLeft);
+    setShowClass(false);
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -26,6 +28,9 @@ const Carousel: React.FC = () => {
     const x = e.pageX - containerRef.current!.offsetLeft;
     const scrollX = x - startX;
     containerRef.current!.scrollLeft = scrollLeft - scrollX;
+    if (scrollLeft === 0) {
+      setShowClass(true);
+    }
   };
 
   const handleMouseUp = () => {
@@ -39,7 +44,9 @@ const Carousel: React.FC = () => {
       </h2>
       <div className="slider-wrap cont-h-s my-8 flex w-full items-center justify-center overflow-hidden whitespace-nowrap">
         <div
-          className="scrollable flex-no-wrap touch-scroll cont-h-s flex gap-6 overflow-x-scroll"
+          className={`scrollable flex-no-wrap touch-scroll cont-h-s flex cursor-grab gap-6 overflow-x-scroll ${
+            showClass ? "edged" : ""
+          }`}
           ref={containerRef}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
